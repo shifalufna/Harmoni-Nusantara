@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #1f1f2f;
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+    position: fixed; /* Membuat header tetap di atas */
+    width: 100%;
+    z-index: 1; /* Mengutamakan posisi header di atas sidebar */
+    top: 0;
+}
+
+.container {
+    display: flex;
+    margin-top: 60px; /* Memberi jarak konten di bawah header */
+}
+
+.sidebar {
+    width: 220px; /* Lebar sidebar */
+    background: #1f1f2f; /* Warna latar belakang sidebar */
+    padding: 15px; /* Padding dalam sidebar */
+    height: 100vh; /* Tinggi sidebar sesuai viewport */
+    position: fixed; /* Membuat sidebar tetap di posisi tetap */
+    top: 60px; /* Mengatur agar sidebar mulai dari bawah header */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    overflow-y: auto; /* Menambahkan scrollbar jika konten lebih tinggi dari viewport */
+}
+
+.sidebar h2 {
+    color: white; /* Warna teks judul sidebar */
+    margin-bottom: 15px; /* Margin bawah judul */
+}
+
+.sidebar ul {
+    list-style: none; /* Menghilangkan bullet point dari daftar */
+    padding: 0; /* Menghilangkan padding */
+}
+
+.sidebar ul li {
+    margin: 15px 0; /* Margin antar item */
+}
+
+.sidebar a {
+    color: #ddd; /* Warna teks link */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    display: flex; /* Menggunakan flexbox untuk perataan ikon dan teks */
+    align-items: center; /* Memposisikan item di tengah secara vertikal */
+    padding: 10px; /* Padding pada link */
+    border-radius: 5px; /* Sudut melengkung */
+    transition: background 0.3s, color 0.3s; /* Transisi saat hover */
+}
+
+.sidebar a i {
+    margin-right: 10px; /* Margin kanan ikon */
+}
+
+.sidebar a:hover {
+    background: #007BFF; /* Warna latar belakang saat hover */
+    color: white; /* Warna teks saat hover */
+}
+
+main {
+    margin-left: 240px; /* Memberi ruang untuk sidebar */
+    padding: 20px; /* Padding untuk konten utama */
+    flex-grow: 1; /* Membuat konten utama tumbuh */
+}
+
+section {
+    margin: 20px 0; /* Margin antar section */
+    background: white; /* Latar belakang section */
+    padding: 15px; /* Padding section */
+    border-radius: 5px; /* Sudut melengkung section */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Bayangan section */
+}
+
+.musical-instrument {
+    margin: 15px; /* Margin antar instrumen musik */
+    width: 1/2;
+}
+
+.musical-instrument img {
+    max-width: 100%; /* Gambar maksimal 100% lebar container */
+    height: auto; /* Tinggi otomatis */
+    border-radius: 5px; /* Sudut melengkung gambar */
+}
+
+footer {
+    text-align: center; /* Memposisikan teks footer di tengah */
+    padding: 10px 0; /* Padding footer */
+    background-color: #333; /* Warna latar belakang footer */
+    color: white; /* Warna teks footer */
+    position: relative; /* Posisi footer */
+    bottom: 0; /* Memposisikan footer di bawah */
+    width: 100%; /* Lebar footer 100% */
+}
+
+.sidebar.hidden {
+    display: none;
+}
+
+.toggle-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    position: absolute;
+    top: 20px;
+    left: 20px; /* Ubah dari right ke left */
+}
+
